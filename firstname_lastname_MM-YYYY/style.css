@@ -1,0 +1,43 @@
+.header{
+   text-align: center;
+   border-bottom: black;
+   border-bottom-style: inset;
+   padding: 10px;
+}
+.logo{
+   max-height: 50px;
+   display: inline-block;
+}
+h1{
+   text-decoration-line: underline;
+}
+.infoDiv{
+   display: flex;
+}
+button{
+   background-color: black;
+   color: white;
+}
+.imgBox{
+   background-color: grey;
+   color: grey;
+}
+.columns{
+   padding: 5px; 
+   margin-bottom: 15px; 
+}
+main{
+   display: table-caption;
+}
+.contactTitles{
+   text-align: left;
+   margin: 0px;
+}
+.contactInfo{
+   background-color: grey;
+   text-align: -webkit-center;
+   padding-bottom: 30px;
+}
+ul{
+   padding-left: 0px;
+}
