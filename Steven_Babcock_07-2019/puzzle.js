@@ -18,42 +18,65 @@
 // Jordan Heigle
 // Tyler Viles
 
+//Event listener to listen for the content to be loaded on the page
+document.addEventListener('DOMContentLoaded', function(){
 
-window.onload = function(){   
-   document.getElementById("myLink").onclick = function(){
-      //event listener to listen for multiple clicks on the myLink variable, If clicked more than once, dispaly an alert for the user.
-      let pageAlert = document.getElementById('myLink');
-      pageAlert.addEventListener('click', function() {
-         alert('Results have already been given at the bottom of the page.');
-     }, false);
+   //boolean to be used for page alert, once link is clicked, the status will change and allow the page alert to be executed
+   let didShowResults = false;
 
-      //take inital 2 sets of arrays and combine them together to form one large array at which point i can remove any duplicates allowing me to return an arrary of all unique names.
-      //names arrays given in github
-      let names1 = ["Matt Johnson", "Bart Paden", "Ryan Doss", "Michael Spangler"];
-      let names2 = ["Matt Johnson", "Bart Paden", "Jordan Heigle", "Tyler Viles"];
+   // connect to the link
+   const myLinkElm = document.getElementById("myLink");
+   
+   //
+   function showResults(event) {
+   if (event && event.preventDefault) {
+   event.preventDefault();
+   }
+   if (didShowResults) {
+   alert('Results have already been given at the bottom of the page.');
+   return;
+   }
+   // Names colleted from gitHub, sorted into arrays.
+   let names1 = ["Matt Johnson", "Bart Paden", "Ryan Doss", "Michael Spangler"];
+   let names2 = ["Matt Johnson", "Bart Paden", "Jordan Heigle", "Tyler Viles"];
+   // merge arrays together and return a new array to be manipulated
+   let names3 = names1.concat(names2);   
+   let results = [];
+   let len = names3.length;
+   
+   // for loop to iterate through names3 array and return unique values to the results array
+   for (let i = 0; i < len; i++) {
+   const item = names3[i];
+   if (!results.includes(item)) {
+   results.push(item);
+   }
+   }
+   //check to see if results are all unique values
+   console.log(results);
 
-      //push names2 array to end of names1 array
-      names1.push.apply(names1, names2);
+   // FILTER RESULTS ARRAY INTO AN UNORDERED LIST
 
-      //new array for final results
-      let results = [];
-
-      // loop over new names1 array created with previous push.apply method above and remove duplicates by pushing unique values to a new results array
-      for ( let i = 0; i < names1.length; i++){
-             if(results.indexOf(names1[i]) === -1){
-                results.push(names1[i]);
-             }
-          }
-          console.log(results); 
-          //push new results array to the page when link is pressed. 
-          //was unable to figure out how to separate the array into a broken up unordered list         
-          results.forEach(function(unList, num, all) {             
-            document.getElementById("list").innerHTML = unList. ;
-             console.log(unList);
-            
-          });      
-             // return false to prevent link from navigating away from page on click
-              return false;
-          }
-         }
-         
+   //connect to HTML ID tag for list
+   const unorderedList = document.getElementById("list");
+   //helper function to create a new LI, and append results for an Unordered List
+   const addToUnorderedList = (name) => {
+   //creats a new LI in the HTML doc
+   const li = document.createElement('li');
+   li.innerText = name;
+   li.setAttribute('id', name);
+   unorderedList.appendChild(li);
+   }
+   //forEach loop to grab each value of the results array and run the add to UL function above
+   results.forEach((name, index, arr) => {
+   addToUnorderedList(name);
+   //log to make sure the names are being added to the list
+   console.log(`Added "${name}" to the list!`);
+   });
+   
+   //changes to reflect the link being clicked and allow access to the page alert for multiple clicks
+   didShowResults = true;
+   }
+   //page alert to inform the user that the results have been sorted into an unordered list
+   myLinkElm.addEventListener('click', showResults);
+   
+   });

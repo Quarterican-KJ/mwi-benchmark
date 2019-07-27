@@ -25,6 +25,6 @@ Steven Babcock
 ### Code Test
 
 Any details you'd like to mention about your code test.
-This was my first time playing with PHP and i was unsure how to test if a email would send, from my brief understanding it looks as if you cannot use a gmail based email address so I included ryans email address. I also had an issue with getting my returned javascript array to display as an unordered list. Aside from those few things I belive that I covered all the other points. If there was something that I could have done better i would like to know, afterall I applied for the chance to learn from people smarter than myself.
+This was my first time playing with PHP and i was unsure how to test if a email would send, from my brief understanding it looks as if you cannot use a gmail based email address so I included ryans email address. If there was something that I could have done better i would like to know, afterall I applied for the chance to learn from people smarter than myself.
 
 ---
