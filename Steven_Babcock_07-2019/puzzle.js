@@ -47,8 +47,10 @@ window.onload = function(){
           console.log(results); 
           //push new results array to the page when link is pressed. 
           //was unable to figure out how to separate the array into a broken up unordered list         
-          results.forEach(element => {
-            document.getElementById("list").innerHTML = "<ul>"+results+"</ul>";
+          results.forEach(function(unList, num, all) {             
+            document.getElementById("list").innerHTML = unList. ;
+             console.log(unList);
+            
           });      
              // return false to prevent link from navigating away from page on click
               return false;

@@ -61,7 +61,7 @@
    <h1>Heading One</h1>
    <p>Remove the duplicates of 2 Javascript objects and output the list of distinct names in and unordered list when <a id="myLink" href="">this link is pressed</a>, if the operation has been completed already notify the user that this has already been done.</p>
    <ul>Returned Results</ul>
-   <ul id="list" class="list">
+   <ul id="list" class="list">   
    </ul>
 
 </div>
