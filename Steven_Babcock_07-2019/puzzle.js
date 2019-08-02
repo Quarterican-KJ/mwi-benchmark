@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function(){
    
    //
    function showResults(event) {
-   if (event && event.preventDefault) {
-   event.preventDefault();
-   }
-   if (didShowResults) {
-   alert('Results have already been given at the bottom of the page.');
-   return;
-   }
+         if (event && event.preventDefault) {
+            event.preventDefault();
+         }
+         if (didShowResults) {
+            alert('Results have already been given at the bottom of the page.');
+         return;
+         }
    // Names colleted from gitHub, sorted into arrays.
    let names1 = ["Matt Johnson", "Bart Paden", "Ryan Doss", "Michael Spangler"];
    let names2 = ["Matt Johnson", "Bart Paden", "Jordan Heigle", "Tyler Viles"];
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function(){
    
    // for loop to iterate through names3 array and return unique values to the results array
    for (let i = 0; i < len; i++) {
-   const item = names3[i];
+         const item = names3[i];
    if (!results.includes(item)) {
-   results.push(item);
+         results.push(item);
    }
    }
    //check to see if results are all unique values
@@ -59,16 +59,16 @@ document.addEventListener('DOMContentLoaded', function(){
    //connect to HTML ID tag for list
    const unorderedList = document.getElementById("list");
    //helper function to create a new LI, and append results for an Unordered List
-   const addToUnorderedList = (name) => {
-   //creats a new LI in the HTML doc
-   const li = document.createElement('li');
-   li.innerText = name;
-   li.setAttribute('id', name);
-   unorderedList.appendChild(li);
+         const addToUnorderedList = (name) => {
+         //creats a new LI in the HTML doc
+            const li = document.createElement('li');
+            li.innerText = name;
+            li.setAttribute('id', name);
+            unorderedList.appendChild(li);
    }
    //forEach loop to grab each value of the results array and run the add to UL function above
    results.forEach((name, index, arr) => {
-   addToUnorderedList(name);
+      addToUnorderedList(name);
    //log to make sure the names are being added to the list
    console.log(`Added "${name}" to the list!`);
    });

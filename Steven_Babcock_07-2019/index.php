@@ -20,7 +20,7 @@
    Respnsiveness for mobile.-- Not much to change. looks and preforms well across phones, tablets, and desktops.  -->
    <!-- header -->
    <header class="header"><img class="logo" src="/mwi-benchmark\img\mwi-logo-horizontal.png" alt="logo" /></header>
-   <h1>Heading One</h1>
+   <h1 class="mainH1">Heading One</h1>
    <div class="infoDiv">
    <div class="columns">
       <div class="imgBox">this is a dummy box where i would put an img as a banner that matches the type of content for this info table </div>
@@ -47,11 +47,11 @@
    <p>Contact</p>
    <form class="contact-form" action="contactform.php" method="post">
       <p class="contactTitles">Email</p>
-      <input type="text" name="Email" placeholder="Your Email">
+      <input type="text" name="email" placeholder="Your Email" required>
       <p class="contactTitles">Subject</p>
-      <input type="text" name="Subject" placeholder="Subject">
+      <input type="text" name="subject" placeholder="Subject" required>
       <p class="contactTitles">Message</p>
-      <textarea name="Message" placeholder="Type message here"></textarea>
+      <textarea name="message" placeholder="Type message here" required></textarea>
       <button type="submit" name="submit">Submit</button>
    </form>
    </main>

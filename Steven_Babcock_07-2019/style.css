@@ -8,11 +8,15 @@
    max-height: 50px;
    display: inline-block;
 }
-h1{
+.mainH1{
    text-decoration-line: underline;
+   padding-left: 38px;
 }
 .infoDiv{
    display: flex;
+   margin-left: 30px;
+   margin-right: 30px;
+
 }
 button{
    background-color: black;
@@ -23,7 +27,7 @@ button{
    color: grey;
 }
 .columns{
-   padding: 5px; 
+   padding: 8px; 
    margin-bottom: 15px; 
 }
 main{
@@ -38,6 +42,37 @@ main{
    text-align: -webkit-center;
    padding-bottom: 30px;
 }
+.javaScriptPuzzle{
+   margin-left: 30px;
+   margin-right: 30px;
+}
 ul{
    padding-left: 0px;
+}
+.list{
+   padding-left: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 720px) {
+/* 720px width should account for mobile devices with a break point right before tablet viewport range */
+body{
+   display: unset;
+}
+.mainH1{
+   padding: 0px;
+   text-align: center;
+}
+.infoDiv{
+   display: inline-block;
+}
+
+}
+
+@media screen and (max-width: 1025px){
+/* 1025px width accounts for tablets ranging from 720px with to 1025px for iPad Pro */
+.columns{
+   /* need to figure a way to break 3 columns into 2 columns for tablet. */
+   display: flex;
+}
 }
