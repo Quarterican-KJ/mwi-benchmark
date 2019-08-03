@@ -12,17 +12,6 @@
   text-decoration-line: underline;
   padding-left: 0px;
 }
-.infoDiv {
-  /* display: flex;
-  flex-flow: row wrap;
-  justify-content: center; */
-
-  display: block;
-  clear: both;
-  overflow: hidden;
-  margin-left: -30px;
-  margin-right: -30px;
-}
 .button {
   margin-bottom: 15px;
 }
@@ -52,37 +41,9 @@ main {
 .inputField {
   width: 300px;
 }
-.javaScriptPuzzle {
-  /* margin-left: 30px;
-  margin-right: 30px; */
-}
 ul {
   padding-left: 0px;
 }
 .list {
   padding-left: 15px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 720px) {
-  /* 720px width should account for mobile devices with a break point right before tablet viewport range */
-  body {
-    display: unset;
-  }
-  .mainH1 {
-    padding: 0px;
-    text-align: center;
-  }
-  /* .infoDiv{
-     display: inline-block;
-  } */
-}
-
-@media screen and (min-width: 1200px) {
-  /* 1025px width accounts for tablets ranging from 720px with to 1025px for iPad Pro */
-  .container {
-    max-width: 1350px;
-    /* need to figure a way to break 3 columns into 2 columns for tablet. */
-    /* display: flex; */
-  }
 }
